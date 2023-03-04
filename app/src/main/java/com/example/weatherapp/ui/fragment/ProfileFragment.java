@@ -10,16 +10,18 @@ import android.view.ViewGroup;
 
 import com.example.weatherapp.R;
 import com.example.weatherapp.base.BaseFragment;
-import com.example.weatherapp.databinding.FragmentHomeBinding;
+import com.example.weatherapp.databinding.FragmentProfileBinding;
 
-public class HomeFragment extends BaseFragment {
 
-    private FragmentHomeBinding binding;
+public class ProfileFragment extends BaseFragment {
+
+    private FragmentProfileBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater,container,false);
+        binding = FragmentProfileBinding.inflate(inflater,container,false);
         return binding.getRoot();
+
     }
 }
