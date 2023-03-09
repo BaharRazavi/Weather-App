@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
     tools:context=".ui.fragment.SettingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/setting"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/purple_500"/>
 
-</FrameLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_4x"
+        android:text="Notifications"/>
+    
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_show_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/font_size_4x"
+        android:text="Show location"/>
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_show_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_4x"
+        android:text="Show Date"/>
+
+
+</LinearLayout>

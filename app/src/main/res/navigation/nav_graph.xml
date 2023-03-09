@@ -15,11 +15,6 @@
             app:destination="@id/profileFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.example.weatherapp.ui.fragment.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
-    <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.weatherapp.ui.fragment.SettingFragment"
         android:label="fragment_setting"
