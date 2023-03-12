@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/settingFragment"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_settings"/>
+
+    <item android:id="@+id/homeFragment"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+
+    <item android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"/>
+
+    <item android:title="Mood">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/good_mood_menu"
+                    android:icon="@drawable/ic_baseline_mood_24"
+                    android:title="Good" />
+                <item
+                    android:id="@+id/bad_mood_menu"
+                    android:icon="@drawable/ic_baseline_mood_bad_24"
+                    android:title="Bad" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
