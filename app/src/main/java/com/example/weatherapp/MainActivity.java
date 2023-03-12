@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -16,10 +17,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.weatherapp.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Objects;
 
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavController navController;
     boolean doubleBackToExitPressedOnce = false;
+
+    CoordinatorLayout myHomeLayout;
+    FloatingActionButton mFab;
 
 
     @Override
@@ -50,6 +57,20 @@ public class MainActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(binding.navigationView);
+
+        myHomeLayout = findViewById(R.id.home_layout);
+        mFab = findViewById(R.id.fab);
+
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Snackbar snackbar = Snackbar.make(myHomeLayout, "Welcome to my Weather application!",
+                        Snackbar.LENGTH_LONG);
+                snackbar.show();
+
+            }
+        });
     }
 
 
