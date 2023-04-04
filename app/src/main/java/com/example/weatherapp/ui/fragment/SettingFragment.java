@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import com.example.weatherapp.R;
 import com.example.weatherapp.base.BaseFragment;
 import com.example.weatherapp.databinding.FragmentSettingBinding;
@@ -27,5 +29,17 @@ public class SettingFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initLottieAnimation();
+    }
+
+    private void initLottieAnimation() {
+        // Declaring the animation view
+        binding.animationView.addAnimatorUpdateListener(
+                (animation) -> {
+                    // Do something.
+                });
+        binding.animationView
+                .playAnimation();
+
     }
 }

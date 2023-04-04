@@ -1,5 +1,7 @@
 package com.example.weatherapp.ui.fragment;
 
+import android.widget.MediaController;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -28,5 +30,15 @@ public class ProfileFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setupRawVideo();
+    }
+
+    private void setupRawVideo() {
+        String videoPath = "android.resource://" + requireActivity().getPackageName() + "/" + R.raw.video;
+        Uri uri = Uri.parse(videoPath);
+        binding.video.setVideoURI(uri);
+        MediaController mediaController = new MediaController(getActivity());
+        binding.video.setMediaController(mediaController);
+        mediaController.setAnchorView(binding.video);
     }
 }
